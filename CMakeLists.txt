@@ -33,6 +33,12 @@ endif()
 
 project(opentelemetry-cpp)
 
+add_definitions(-g -std=c++17)
+
+set(CMAKE_C_COMPILER "/usr/lib/llvm-14/bin/clang" CACHE string "clang compiler" FORCE)
+set(CMAKE_CXX_COMPILER "/usr/lib/llvm-14/bin/clang++" CACHE string "clang++ compiler" FORCE)
+
+
 # Mark variables as used so cmake doesn't complain about them
 mark_as_advanced(CMAKE_TOOLCHAIN_FILE)
 
